@@ -28,7 +28,7 @@ ul{
 	
 }
 .btn {
-	width: 200px;
+	width: 220px;
 	display: inline-block;
   padding: 10px 0px;
   color:#ffffff;
@@ -106,7 +106,7 @@ header a:hover{
 /* Showcase */
 #showcase{
   min-height:500px;
-  background:url('../img/showcase.jpg');
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../img/showcase.jpg');
   text-align:center;
   color:#ffffff;
   background-size: cover;
@@ -145,8 +145,25 @@ header a:hover{
 #boxes .box h3 {
 	text-align: center;
 }
-
-#boxes .box{
+#boxes .container{
+  width: 100%;
+  height: auto;
+  background: white;
+  /*flex*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+.box {
+  width: 30%;
+  height: auto;
+  background: white;
+  margin:20px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+/*#boxes .box{
 	transition: 0.4s;
 	background: white;
 	font-size: 16px;
@@ -156,7 +173,7 @@ header a:hover{
   justify-content: space-between;
   margin: 5px;
   padding: 0 10px;
-}
+}*/
 
 #boxes .box img{
   width:100%;
@@ -189,4 +206,14 @@ width : 100% ;
   #showcase h1{
     margin-top:40px;
   }
+  }
+  @media screen and (max-width:1200px){
+    .box{
+      width: 40%;
+    }
+  }
+  @media screen and (max-width:600px){
+    .box{
+      width: 90%;
+    }
   }
